@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Make Money Online</title>
-
 <style>
 body{
     margin:0;
@@ -15,7 +14,6 @@ body{
     align-items:center;
     height:100vh;
 }
-
 .container{
     background:#fff;
     padding:25px;
@@ -25,23 +23,19 @@ body{
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.25);
 }
-
 img{
     width:100%;
     border-radius:10px;
 }
-
 h1{
     font-size:22px;
     margin:15px 0;
     color:#222;
 }
-
 p{
     color:#555;
     font-size:14px;
 }
-
 input{
     width:100%;
     padding:12px;
@@ -50,7 +44,6 @@ input{
     border:1px solid #ddd;
     font-size:14px;
 }
-
 button{
     width:100%;
     padding:12px;
@@ -62,7 +55,6 @@ button{
     font-size:16px;
     cursor:pointer;
 }
-
 .loading{
     display:none;
     margin-top:10px;
@@ -71,27 +63,18 @@ button{
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
-
 <img src="https://i.imgur.com/itgUKFw.jpeg">
-
 <h1>How to Make $10,000 Per Month Online</h1>
-
 <p>Enter your email to get instant access.</p>
 
 <form id="form">
-
 <input type="email" id="email" placeholder="Enter your email" required>
-
 <button type="submit">🚀 Continue</button>
-
 <div class="loading" id="loading">Processing...</div>
-
 </form>
-
 </div>
 
 <script>
@@ -100,7 +83,6 @@ document.getElementById("form").addEventListener("submit", async function(e){
 
     var email = document.getElementById("email").value;
     var loading = document.getElementById("loading");
-
     loading.style.display = "block";
 
     try {
@@ -111,10 +93,10 @@ document.getElementById("form").addEventListener("submit", async function(e){
             })
         });
     } catch(err) {
-        console.log(err);
+        console.log("Fetch Error:", err);
     }
 
-    // redirect after success
+    // Redirect after short delay to ensure email is saved
     setTimeout(function(){
         window.location.href = "https://your-smart-link.com";
     }, 1200);

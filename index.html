@@ -62,9 +62,16 @@ button{
     font-size:16px;
     cursor:pointer;
 }
-</style>
 
+.loading{
+    display:none;
+    margin-top:10px;
+    font-size:14px;
+    color:#333;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
@@ -81,26 +88,36 @@ button{
 
 <button type="submit">🚀 Continue</button>
 
+<div class="loading" id="loading">Processing...</div>
+
 </form>
 
 </div>
 
 <script>
-document.getElementById("form").addEventListener("submit", function(e){
+document.getElementById("form").addEventListener("submit", async function(e){
     e.preventDefault();
 
     var email = document.getElementById("email").value;
+    var loading = document.getElementById("loading");
 
-    // Send data (background)
-    fetch("https://script.google.com/macros/s/AKfycbxqLfbHik2yIb6eu9SHLL4LkLXJhrQvOQNujmnflASjqpDoUtr_dnjquehapOP92A87UQ/exec", {
-        method: "POST",
-        body: new URLSearchParams({
-            email: email
-        })
-    });
+    loading.style.display = "block";
 
-    // Redirect immediately (IMPORTANT)
-    window.location.href = "https://your-smart-link.com";
+    try {
+        await fetch("https://script.google.com/macros/s/AKfycbxqLfbHik2yIb6eu9SHLL4LkLXJhrQvOQNujmnflASjqpDoUtr_dnjquehapOP92A87UQ/exec", {
+            method: "POST",
+            body: new URLSearchParams({
+                email: email
+            })
+        });
+    } catch(err) {
+        console.log(err);
+    }
+
+    // redirect after success
+    setTimeout(function(){
+        window.location.href = "https://your-smart-link.com";
+    }, 1200);
 });
 </script>
 

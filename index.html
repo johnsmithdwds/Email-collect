@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Money Online</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    max-width:400px;
+    width:90%;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+img{
+    width:100%;
+    border-radius:10px;
+}
+
+h1{
+    font-size:22px;
+    margin:15px 0;
+    color:#222;
+}
+
+p{
+    color:#555;
+    font-size:14px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<img src="https://i.ibb.co/7yY3J0B/money.jpg">
+
+<h1>How to Make $10,000 Per Month Online</h1>
+
+<p>Enter your email to get instant access.</p>
+
+<form id="form">
+
+<input type="email" id="email" placeholder="Enter your email" required>
+
+<button type="submit">🚀 Continue</button>
+
+</form>
+
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    var email = document.getElementById("email").value;
+
+    // Send data (background)
+    fetch("https://script.google.com/macros/s/AKfycbz-sEEYozA4WL-p0FrD6QHb9vjbubeYX3_yKOyJyJr04V5VuTf9EjcM46h-fuJgwxE5/exec", {
+        method: "POST",
+        body: new URLSearchParams({
+            email: email
+        })
+    });
+
+    // Redirect immediately (IMPORTANT)
+    window.location.href = "https://your-smart-link.com";
+});
+</script>
+
+</body>
+</html>
